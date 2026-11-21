@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallery.css">
+    <title>Document</title>
+    <script>
+const galleryImages = document.querySelectorAll(".gallery-item img");
+
+const previewImage = document.getElementById("previewImage");
+
+const previewTitle = document.getElementById("previewTitle");
+
+const previewText = document.getElementById("previewText");
+
+galleryImages.forEach(function(image) {
+
+    image.addEventListener("click", function() {
+
+        previewImage.src = image.src;
+
+        previewTitle.textContent =
+        image.parentElement
+        .querySelector("h3")
+        .textContent;
+
+        previewText.textContent =
+        image.parentElement
+        .querySelector("p")
+        .textContent;
+
+        document
+        .querySelector(".preview-section")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+    });
+
+});
+const favoriteBtn = document.querySelector(".favorite-btn");
+
+favoriteBtn.addEventListener("click", function () {
+
+    if (favoriteBtn.textContent.includes("Add to Favorite")) {
+
+        favoriteBtn.textContent = "❤️ Added to Favorites";
+
+    } else {
+
+        favoriteBtn.textContent = "❤️ Add to Favorite";
+
+    }
+
+});
+
+
+</script>
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | The Best Construction Company</title>
+
+    <link rel="stylesheet" href="gallery.css">
+
+
+</head>
+<body>
+ <header class="gallery-header" style="background-image: url(images\ \(25\).jpeg); background-repeat: no-repeat;background-size: cover; background-attachment: fixed;">
+
+
+
+    <div class="company-name" style="border-right:solid 3px red ;padding-left: 2px;">
+
+    <div class="animated-logo">
+    
+
+        <div class="logo-icon">
+            🏠
+        </div>
+     </div>
+        <div class="logo-text">
+
+            <h1>THE BEST</h1>
+
+            <h2>CONSTRUCTION</h2>
+
+            <div class="company-line">
+                <span></span>
+                <p>COMPANY</p>
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BORDER + COMPANY NAME -->
+    <div class="company-title">
+
+    
+
+    </div>
+
+</div>
+
+    <div class="gallery-title">
+
+        <h2><span style="border-bottom: solid 3px orange;"> Our</span> Gallery</h2>
+
+        <p>
+            Explore our construction projects,
+            completed work and building designs.
+        </p>
+
+    </div>
+
+ </header>
+</div>
+
+
+
+<main>
+
+    <section class="gallery-section">
+
+        <h2 class="section-title">
+            Construction Projects
+        </h2>
+
+
+        <div class="gallery-grid">
+
+
+            <!-- Image 1 -->
+   <div class="animated-card">
+            <div class="gallery-item">
+
+                <img src="images (25).jpeg"
+                     alt="House Construction">
+
+                <div class="image-info">
+
+                    <h3>House Construction</h3>
+
+                    <p>
+                        Residential construction project
+                    </p>
+
+                </div>
+
+            </div>
+
+  </div>
+            <!-- Image 2 -->
+            <div class="animated-card">
+            <div class="gallery-item">
+
+                <img src="images (26).jpeg"
+                     alt="Commercial Building">
+
+                <div class="image-info">
+
+                    <h3>Commercial Building</h3>
+
+                    <p>
+                        Modern commercial construction
+                    </p>
+
+                </div>
+
+            </div>
+
+          </div>
+            <!-- Image 3 -->
+            <div class="animated-card">
+
+            <div class="gallery-item">
+
+                <img src="istockphoto-2117759132-1024x1024.jpg"
+                     alt="Building Construction">
+
+                <div class="image-info">
+
+                    <h3>Building Construction</h3>
+
+                    <p>
+                        Quality building work
+                    </p>
+
+                </div>
+
+            </div>
+</div>
+
+            <!-- Image 4 -->
+
+            <div class="gallery-item">
+
+                <img src="images (27).jpeg"
+                     alt="Construction Site">
+
+                <div class="image-info">
+
+                    <h3>Construction Site</h3>
+
+                    <p>
+                        Ongoing construction project
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Image 5 -->
+
+            <div class="gallery-item">
+
+                <img src="istockphoto-2190448800-612x612.jpg"
+                     alt="Renovation Work">
+
+                <div class="image-info">
+
+                    <h3>Renovation Work</h3>
+
+                    <p>
+                        Professional renovation project
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Image 6 -->
+
+            <div class="gallery-item">
+
+                <img src="images (28).jpeg"
+                     alt="Finishing Work">
+
+                <div class="image-info">
+
+                    <h3>Finishing Work</h3>
+
+                    <p>
+                        Interior and exterior finishing
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="preview-section">
+
+    <h2>My up coming Project</h2>
+
+    <div class="preview-box">
+
+        <img id="previewImage"
+             src="Top-view-of-modern-house-design-in-pakistan-1024x576.webp"
+             alt="Project Preview">
+
+        <!-- Add to Favorite Button -->
+        <a href="Contact Page.html"><button class="favorite-btn" type="button">
+            ❤️ Add to Favorite
+        </button></a>
+
+    </div>
+
+    <h3 id="previewTitle">
+        House Construction
+    </h3>
+
+</section>
+</main>
+
+
+<footer class="gallery-footer">
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Company Information -->
+        <div class="footer-box">
+
+            <h2>THE BEST</h2>
+            <h3>CONSTRUCTION COMPANY</h3>
+
+            <p>
+                We provide professional construction services
+                for residential and commercial projects with
+                quality workmanship and reliable service.
+            </p>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Gallery</li>
+                <li>Contact Us</li>
+            </ul>
+
+        </div>
+
+
+        <!-- Services -->
+        <div class="footer-box">
+
+            <h3>Our Services</h3>
+
+            <ul>
+                <li>House Construction</li>
+                <li>Commercial Construction</li>
+                <li>Building Renovation</li>
+                <li>Plumbing Work</li>
+                <li>Electrical Work</li>
+                <li>Painting & Finishing</li>
+            </ul>
+
+        </div>
+
+
+        <!-- Contact -->
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <p>📞 0305-4646023</p>
+            <p>💬 0311-9875743</p>
+            <p>✉️ arhammuhmad774@gmail.com</p>
+
+            <p>
+                <strong>Owner:</strong><br>
+                Imteaz Ahmad
+            </p>
+
+            <p>
+                <strong>Management Officer:</strong><br>
+                Bilal Ahmad
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Footer -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 The Best Construction Company.
+            All Rights Reserved.&copy;
+        </p>
+
+        <p>
+            Professional Construction & Building Services
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+</footer>
+
+
+
+<script src="gallery.js"></script>
+
+</body>
+
+</html>

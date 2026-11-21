@@ -1,0 +1,563 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #202b38;
+}
+
+
+.gallery-header {
+    min-height: 300px;
+
+    padding: 40px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #202b38;
+    color: white;
+}
+
+
+.company-name h1 {
+    font-size: 35px;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+
+.gallery-title {
+    max-width: 500px;
+    text-align: right;
+}
+
+
+.gallery-title h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+
+.gallery-title p {
+    color: #d5dbe0;
+    line-height: 1.6;
+}
+
+
+
+/* =========================
+   GALLERY SECTION
+========================= */
+
+.gallery-section {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 60px auto;
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+
+
+/* =========================
+   GALLERY GRID
+========================= */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+    repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.gallery-item {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.10);
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+
+.gallery-item:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.18);
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+
+/* =========================
+   IMAGE INFORMATION
+========================= */
+
+.image-info {
+    padding: 18px;
+}
+
+
+.image-info h3 {
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+
+.image-info p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+
+/* =========================
+   PREVIEW
+========================= */
+
+.preview-section {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 80px auto;
+
+    text-align: center;
+}
+
+
+.preview-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+
+.preview-box {
+    width: 100%;
+    height: 500px;
+
+    background: #202b38;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.15);
+}
+
+
+.preview-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+.preview-section h3 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+
+.preview-section p {
+    margin-top: 8px;
+    color: #666;
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.gallery-footer {
+    margin-top: 60px;
+
+    padding: 25px;
+
+    background: #202b38;
+
+    color: #d5dbe0;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .gallery-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .gallery-title {
+        text-align: center;
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+        repeat(2, 1fr);
+    }
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .gallery-header {
+        padding: 35px 20px;
+    }
+
+    .company-name h1 {
+        font-size: 27px;
+    }
+
+    .gallery-title h2 {
+        font-size: 32px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-box {
+        height: 300px;
+    }
+
+}
+/* COMPANY NAME */
+
+.company-name {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* LOGO ICON */
+
+.logo-icon {
+    font-size: 55px;
+}
+
+
+/* LOGO TEXT */
+
+.logo-text h1 {
+    margin: 0;
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.logo-text h2 {
+    margin: 5px 0;
+    color: #f5b400;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+/* COMPANY */
+
+.company-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.company-line span {
+    width: 25px;
+    height: 2px;
+    background: #f5b400;
+}
+
+.company-line p {
+    margin: 0;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+
+/* BORDER BETWEEN LOGO AND TEXT */
+
+.company-title {
+    border-left: 3px solid purple;
+    padding-left: 30px;
+}
+
+
+/* RIGHT SIDE TEXT */
+
+.company-title h1 {
+    margin: 0;
+    color: white;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.footer {
+    background: #202b38;
+    color: white;
+    margin-top: 60px;
+}
+
+
+/* MAIN FOOTER */
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 30px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.3fr 1.3fr;
+    gap: 40px;
+}
+
+
+/* FOOTER BOX */
+
+.footer-box h2 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.footer-box h3 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.footer-box p {
+    color: #d5dbe0;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* LIST */
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-box ul li {
+    color: #d5dbe0;
+    margin-bottom: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-box ul li:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+
+/* BOTTOM */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #cbd1d6;
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+   
+
+}
+.preview-section{
+    opacity: 0.7;
+    transition: 1s;
+}
+.preview-section:hover{
+opacity: 1;
+}
+/* PREVIEW BOX */
+
+.preview-box {
+    position: relative;
+    overflow: hidden;
+}
+
+/* FAVORITE BUTTON */
+
+.favorite-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 14px 25px;
+    background: #e63946;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+}
+
+/* HOVER PAR BUTTON SHOW HOGA */
+
+.preview-box:hover .favorite-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* BUTTON HOVER EFFECT */
+
+.favorite-btn:hover {
+    background: #b91d2b;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+.animated-card {
+    overflow: hidden;
+    border-radius: 12px;
+    transition: box-shadow 0.4s ease;
+}
+
+.animated-card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.animated-card:hover img {
+    transform: scale(1.1);
+}
+
+.animated-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+.animated-logo {
+    font-size: 60px;
+    display: inline-block;
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+ 
+

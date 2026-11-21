@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Construction Cost Calculator | The Best</title>
+
+    <link rel="stylesheet" href="calculator.css">
+
+</head>
+<body>
+
+    <section class="calc-page">
+
+        <div class="calc-header">
+
+            <span class="calc-tag">SMART BUILDING ESTIMATOR</span>
+
+            <h1>Construction Cost Calculator</h1>
+
+            <p>
+                Plan your construction project and estimate
+                your building cost with our smart calculator.
+            </p>
+
+        </div>
+
+
+        <div class="calc-card">
+
+            <div class="calc-heading">
+
+                <div class="calc-icon">🏗️</div>
+
+                <div>
+                    <h2>Project Details</h2>
+                    <p>Enter your construction information below.</p>
+                </div>
+
+            </div>
+
+
+            <div class="calc-form">
+
+                <!-- Covered Area -->
+
+                <div class="calc-field">
+
+                    <label for="area">
+                        Covered Area (Square Feet)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="area"
+                        placeholder="e.g. 450"
+                        min="1"
+                    >
+
+                </div>
+
+
+                <!-- Rate -->
+
+                <div class="calc-field">
+
+                    <label for="rate">
+                        Construction Rate (PKR / Sq. Ft.)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="rate"
+                        placeholder="e.g. 450"
+                        min="1"
+                    >
+
+                </div>
+
+
+                <!-- Budget -->
+
+                <div class="calc-field">
+
+                    <label for="budget">
+                        Your Total Budget (PKR)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="budget"
+                        placeholder="e.g. 5000000"
+                        min="0"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="calc-buttons">
+
+                <button onclick="calculateCost()" class="calculate-btn">
+                    Calculate Construction Cost
+                    <span>→</span>
+                </button>
+
+                <button onclick="resetCalculator()" class="reset-btn">
+                    Reset Calculator
+                </button>
+
+            </div>
+
+
+            <!-- Error Message -->
+
+            <p id="errorMessage"></p>
+
+
+            <!-- Results -->
+
+            <div id="resultBox" class="result-box">
+
+                <h3>YOUR PROJECT ESTIMATE</h3>
+
+                <div class="result-main">
+
+                    <span>Estimated Construction Cost</span>
+
+                    <h2 id="totalCost">Rs. 0</h2>
+
+                </div>
+
+
+                <div class="result-details">
+
+                    <div class="result-item">
+
+                        <span>Total Covered Area</span>
+
+                        <strong id="showArea">0 Sq. Ft.</strong>
+
+                    </div>
+
+
+                    <div class="result-item">
+
+                        <span>Construction Rate</span>
+
+                        <strong id="showRate">Rs. 0</strong>
+
+                    </div>
+
+
+                    <div class="result-item">
+
+                        <span>Your Budget</span>
+
+                        <strong id="showBudget">Rs. 0</strong>
+
+                    </div>
+
+
+                    <div class="result-item">
+
+                        <span>Budget Status</span>
+
+                        <strong id="budgetStatus">Not Calculated</strong>
+
+                    </div>
+
+
+                    <div class="result-item final-item">
+
+                        <span>Remaining / Extra Amount</span>
+
+                        <strong id="remainingAmount">Rs. 0</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Disclaimer -->
+
+            <div class="calc-note">
+
+                <span>ⓘ</span>
+
+                <p>
+                    This calculator provides an approximate construction
+                    cost only. Actual costs may vary according to
+                    materials, labour, design, location and market rates.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a href="Home page.html" class="back-home">
+            ← Back to Home Page
+        </a>
+
+    </section>
+
+
+    <script src="calculator.js"></script>
+
+</body>
+</html>

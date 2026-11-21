@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+      .meta{
+        background-color: gray;
+      }
+      .best{
+       font-size: 20px;
+       font-weight: bold;
+       color: red;
+      }
+      .map-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.map-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+* {
+    box-sizing: border-box;
+}
+
+.contact-section {
+    width: 100%;
+    padding: 70px 20px;
+    background: #f4f5f7;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+
+/* LEFT SIDE */
+
+.contact-info {
+    background: #202b38;
+    color: white;
+    padding: 45px 35px;
+}
+
+.contact-info h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.contact-intro {
+    color: #d5dbe0;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* CONTACT ITEMS */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    text-decoration: none;
+    color: white;
+
+    padding: 15px;
+    margin: 12px 0;
+
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    background: rgba(255,255,255,0.17);
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+.contact-item h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #d8dde1;
+}
+
+
+/* OWNER / MANAGEMENT */
+
+.person-box {
+    margin-top: 20px;
+    padding: 15px;
+
+    border-left: 4px solid white;
+    background: rgba(255,255,255,0.07);
+}
+
+.person-box h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+}
+
+.person-box p {
+    margin: 0;
+    color: #d8dde1;
+}
+
+
+/* FORM SIDE */
+
+.contact-form {
+    padding: 45px;
+}
+
+.contact-form h2 {
+    font-size: 30px;
+    color: #202b38;
+    margin-bottom: 30px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 7px;
+
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+    margin-bottom: 20px;
+
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+
+    outline: none;
+    font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #202b38;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+
+/* SEND BUTTON */
+
+.contact-form button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #202b38;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #344454;
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 30px 25px;
+    }
+
+}
+
+
+
+.footer {
+    width: 100%;
+    background: #202b38;
+    color: white;
+    margin-top: 60px;
+}
+
+
+
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 60px 30px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.3fr 1.3fr;
+
+    gap: 40px;
+}
+
+
+/* =========================
+   FOOTER COLUMNS
+========================= */
+
+.footer-column h2 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.footer-column h3 {
+    margin-top: 6px;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.footer-column p {
+    color: #d5dbe0;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER LIST
+========================= */
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    color: #d5dbe0;
+    margin-bottom: 12px;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.footer-column ul li:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 20px 30px;
+
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #cbd1d6;
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+.animated-button {
+    background: #f5b400;
+    color: #222;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.animated-button:hover {
+    background: #222;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.best {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.best .sky-animation {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+
+    background: linear-gradient(
+        to bottom,
+        #4facfe,
+        #d8f1ff
+    );
+}
+
+.best .sun {
+    position: absolute;
+    top: 25px;
+    right: 12%;
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+    background: #ffdf45;
+
+    box-shadow: 0 0 25px 8px rgba(255, 223, 69, 0.5);
+
+    animation: sunGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes sunGlow {
+    from {
+        box-shadow: 0 0 20px 5px rgba(255, 223, 69, 0.4);
+        
+    }
+
+    to {
+        box-shadow: 5 0 40px 15px rgba(255, 223, 69, 0.7);
+    }
+}
+
+.best .cloud {
+    position: absolute;
+
+    width: 110px;
+    height: 32px;
+
+    background: white;
+    border-radius: 30px;
+
+    animation: cloudMove 25s linear infinite;
+}
+
+.best .cloud span {
+    position: absolute;
+
+    background: white;
+    border-radius: 50%;
+}
+
+.best .cloud span:nth-child(1) {
+    width: 42px;
+    height: 42px;
+    top: -20px;
+    left: 15px;
+}
+
+.best .cloud span:nth-child(2) {
+    width: 55px;
+    height: 55px;
+    top: -30px;
+    left: 38px;
+}
+
+.best .cloud span:nth-child(3) {
+    width: 38px;
+    height: 38px;
+    top: -16px;
+    left: 75px;
+}
+
+
+.best .cloud1 {
+    top: 25%;
+    left: -150px;
+    animation-duration: 22s;
+}
+
+.best .cloud2 {
+    top: 55%;
+    left: -150px;
+    animation-duration: 30s;
+    animation-delay: -12s;
+}
+
+.best .cloud3 {
+    top: 78%;
+    left: -150px;
+    animation-duration: 26s;
+    animation-delay: -6s;
+}
+
+@keyframes cloudMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(100vw + 300px));
+    }
+}
+
+.best > center {
+    position: relative;
+    z-index: 1;
+}
+
+
+    </style>
+</head>
+<body>
+ 
+<div class="best">
+
+    <div class="sky-animation">
+        <div class="sun"></div>
+
+        <div class="cloud cloud1">
+            <span></span><span></span><span></span>
+        </div>
+
+        <div class="cloud cloud2">
+            <span></span><span></span><span></span>
+        </div>
+
+        <div class="cloud cloud3">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <center>
+        <h2>Get a Free Quote</h2>
+
+        <p>
+            Planning a construction project? Fill out <br>
+            the form and our team will contact you.
+        </p>
+
+        <div class="info-box">
+            <h3>Why Choose Us?</h3>
+            <p>✔ Professional Construction Team</p>
+            <p>✔ Quality Materials</p>
+            <p>✔ On-Time Project Completion</p>
+            <p>✔ Affordable Pricing</p>
+        </div>
+    </center>
+
+</div>
+
+<div>
+ <form action="https://formspree.io/f/xyezwyor">
+ <fieldset>
+    <legend>Fil the Form</legend>
+  Name:<input type="text" placeholder="Please Enter Name" required="" autofocus=""/><br><br>
+    Phone Number:<input type="text" placeholder="Please Enter Phone No" required=""/><br><br>
+  Address: <textarea name="" id="" placeholder="Please Enter Your Address" required=""></textarea><br><br>
+    Emali:<input type="email" name="email" placeholder="Please Enter Emali" required=""/><br><br>
+    Age:<input type="number" name="Age" required=""/><br><br>
+    Project type:<select name="" id="">
+ <option value="House Construction">House Construction</option>
+ <option value="Commercial Building">Commercial Building</option>
+ <option value="Renovation">Renovation</option>
+ <option value="Plumbing Work">Plumbing Work</option>
+ <option value="Electrical Work">Electrical Work</option>
+ <option value="Other">Other</option>
+    </select><br><br>
+      Projet Location:<input type="text" placeholder="Please Enter Project Location" required=""/><br><br>
+        Project Details: <textarea name="" id="" placeholder="Tell us about your construction project..." required=""></textarea><br><br>
+        Project Map: <input type="file" name="image"/><br><br>
+  Gander: <input type="radio" value="m" name="Gander"/>Male
+  Gander: <input type="radio" value="f" name="Gander"/>female
+  Gander: <input type="radio" value="o" name="Gander"/>other <br><br>
+  Date:<input type="date" name="date" required=""/><br><br>
+  <input type="submit" value="submit Request"/><br><br>
+ </fieldset>
+ </form>
+ </div>
+ <div>
+<section class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+
+            <h2>Contact Us</h2>
+
+            <p class="contact-intro">
+                Have a construction project in mind?
+                Contact our team today for more information.
+            </p>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/923119875743"
+               target="_blank"
+               class="contact-item">
+
+                <div class="contact-icon">💬</div>
+
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>0311-9875743</p>
+                </div>
+
+            </a>
+
+
+            <!-- Call -->
+            <a href="tel:+923054646023"
+               class="contact-item">
+
+                <div class="contact-icon">📞</div>
+
+                <div>
+                    <h3>Call Us</h3>
+                    <p>0305-4646023</p>
+                </div>
+
+            </a>
+
+
+            <!-- Gmail -->
+            <a href="mailto:arhammuhmad774@gmail.com"
+               class="contact-item">
+
+                <div class="contact-icon">✉️</div>
+
+                <div>
+                    <h3>Email</h3>
+                    <p>arhammuhmad774@gmail.com</p>
+                </div>
+
+            </a>
+
+
+            <!-- Owner -->
+            <div class="person-box">
+
+                <h3>Owner</h3>
+                <p>Imteaz Ahmad</p>
+
+            </div>
+
+
+            <!-- Management Officer -->
+            <div class="person-box">
+
+                <h3>Management Officer</h3>
+                <p>Bilal Ahmad</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Message Form -->
+        <div class="contact-form">
+
+            <h2>Send Us a Message</h2>
+
+           <form action="https://formspree.io/f/xyezwyor" method="POST">
+
+    <label>Your Name</label>
+    <input type="text" name="name"
+           placeholder="Enter your name" required>
+
+    <label>Your Email</label>
+    <input type="email" name="email"
+           placeholder="Enter your email" required>
+
+    <label>Your Phone</label>
+    <input type="tel" name="phone"
+           placeholder="Enter your phone number">
+
+    <label>Your Message</label>
+    <textarea name="message"
+              rows="6"
+              placeholder="Write your message..."
+              required></textarea>
+  
+   
+
+  <button class="animated-button">
+    
+        Send Message
+   
+  </button>
+</form>
+ 
+        </div>
+
+    </div>
+
+</section>
+ </div>
+ <div>
+   <section class="map-section">
+
+      <h2>Our Location</h2>
+
+    
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d35222.08384146311!2d70.29055337690835!3d28.408084803353226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2s!4v1789789313777!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>"
+
+   </section>
+  </div>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Company -->
+        <div class="footer-column">
+
+            <h2>THE BEST</h2>
+            <h3>CONSTRUCTION COMPANY</h3>
+
+            <p>
+                We provide professional construction services
+                for residential and commercial projects with
+                quality workmanship and reliable service.
+            </p>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Gallery</li>
+                <li>Contact Us</li>
+            </ul>
+
+        </div>
+
+
+        <!-- Services -->
+        <div class="footer-column">
+
+            <h3>Our Services</h3>
+
+            <ul>
+                <li>House Construction</li>
+                <li>Commercial Construction</li>
+                <li>Building Renovation</li>
+                <li>Plumbing Work</li>
+                <li>Electrical Work</li>
+                <li>Painting & Finishing</li>
+            </ul>
+
+        </div>
+
+
+        <!-- Contact Information -->
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <p>📞 0305-4646023</p>
+
+            <p>💬 0311-9875743</p>
+
+            <p>✉️ arhammuhmad774@gmail.com</p>
+
+            <p>
+                <strong>Owner:</strong><br>
+                Imteaz Ahmad
+            </p>
+
+            <p>
+                <strong>Management Officer:</strong><br>
+                Bilal Ahmad
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer Bottom -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 The Best Construction Company.
+            All Rights Reserved. &copy; &reg;
+        </p>
+
+        <p>
+            Professional Construction & Building Services
+        </p>
+
+    </div>
+
+</footer>
+```
+
+
+</body>
+</html>
